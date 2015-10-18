@@ -1,0 +1,51 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: FSP
+scopeName: source.fsp
+fileTypes: [lts, fsp]
+uuid: 3c1def7a-05ff-48e2-b1cf-f1d3f150908f
+
+patterns:
+- name: keyword.source.fsp
+  comment: "matches a keyword"
+  match: \b(when|const|forall|range|property|progress)
+
+- name: keyword.operator.fsp
+  comment: "matches and operator"
+  match: (->|&&|\|\||%|\+)
+
+- name: comment.line.double-slash.fsp
+  comment: "match comments starting with a double-slash"
+  match: (//).*$\n?
+  captures:
+    '1': {name: punctuation.definition.comment.fsp}
+
+- name: comment.block.fsp
+  comment: "match comment blocks starting with /*"
+  begin: /\*
+  end: \*/
+  captures:
+    '0': {name: punctuation.definition.comment.fsp}
+
+- name: comment.block.documentation.fsp
+  comment: "match comment blocks starting with /** with 2 or more *"
+  begin: /\*\*(?!/)
+  end: \*/
+  captures:
+    '0': {name: punctuation.definition.comment.fsp}
+
+- name: keyword.other.fsp
+  match: \b(STOP|START|ERROR)
+
+- name: constant.source.fsp
+  comment: matches process names
+  match: \b([A-Z][A-Z|_]+)
+
+- name: meta.brace.square.fsp
+  comment: matches square braces [ or ]
+  match: \[|\]
+
+- name: meta.brace.curly.fsp
+  comment: "matches curly braces"
+  match: \{|\}
+...

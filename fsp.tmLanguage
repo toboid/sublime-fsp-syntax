@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>lts</string>
+		<string>fsp</string>
+	</array>
+	<key>name</key>
+	<string>FSP</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>matches a keyword</string>
+			<key>match</key>
+			<string>\b(when|const|forall|range|property|progress)</string>
+			<key>name</key>
+			<string>keyword.source.fsp</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>matches and operator</string>
+			<key>match</key>
+			<string>(-&gt;|&amp;&amp;|\|\||%|\+)</string>
+			<key>name</key>
+			<string>keyword.operator.fsp</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.fsp</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>match comments starting with a double-slash</string>
+			<key>match</key>
+			<string>(//).*$\n?</string>
+			<key>name</key>
+			<string>comment.line.double-slash.fsp</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>/\*</string>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.fsp</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>match comment blocks starting with /*</string>
+			<key>end</key>
+			<string>\*/</string>
+			<key>name</key>
+			<string>comment.block.fsp</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>/\*\*(?!/)</string>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.fsp</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>match comment blocks starting with /** with 2 or more *</string>
+			<key>end</key>
+			<string>\*/</string>
+			<key>name</key>
+			<string>comment.block.documentation.fsp</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(STOP|START|ERROR)</string>
+			<key>name</key>
+			<string>keyword.other.fsp</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>matches process names</string>
+			<key>match</key>
+			<string>\b([A-Z][A-Z|_]+)</string>
+			<key>name</key>
+			<string>constant.source.fsp</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>matches square braces [ or ]</string>
+			<key>match</key>
+			<string>\[|\]</string>
+			<key>name</key>
+			<string>meta.brace.square.fsp</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>matches curly braces</string>
+			<key>match</key>
+			<string>\{|\}</string>
+			<key>name</key>
+			<string>meta.brace.curly.fsp</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.fsp</string>
+	<key>uuid</key>
+	<string>3c1def7a-05ff-48e2-b1cf-f1d3f150908f</string>
+</dict>
+</plist>
