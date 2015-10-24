@@ -39,7 +39,7 @@ patterns:
 
 - name: constant.other.fsp
   comment: matches process names
-  match: \b([A-Z][A-Z|_]+)
+  match: \b([A-Z][A-Z|_|0-9]+)
 
 - name: meta.brace.square.fsp
   comment: matches square braces [ or ]
