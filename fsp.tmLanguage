@@ -89,7 +89,7 @@
 			<key>comment</key>
 			<string>matches process names</string>
 			<key>match</key>
-			<string>\b([A-Z][A-Z|_|0-9]+)</string>
+			<string>\b([a-zA-Z][A-Z|_|0-9]+)</string>
 			<key>name</key>
 			<string>constant.other.fsp</string>
 		</dict>
