@@ -41,6 +41,10 @@ patterns:
   comment: matches process names
   match: \b([a-zA-Z][A-Z|_|0-9]+)
 
+- name: entity.name.function.fsp
+  comment: matches action names
+  match: \b([a-z][a-za-zA-Z|_|0-9]+)
+
 - name: meta.brace.square.fsp
   comment: matches square braces [ or ]
   match: \[|\]
