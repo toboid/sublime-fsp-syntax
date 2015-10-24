@@ -6,7 +6,7 @@ fileTypes: [lts, fsp]
 uuid: 3c1def7a-05ff-48e2-b1cf-f1d3f150908f
 
 patterns:
-- name: keyword.source.fsp
+- name: keyword.reserved.fsp
   comment: "matches a keyword"
   match: \b(when|const|forall|range|property|progress)
 
@@ -14,7 +14,7 @@ patterns:
   comment: "matches and operator"
   match: (->|&&|\|\||%|\+)
 
-- name: comment.line.double-slash.fsp
+- name: comment.line.fsp
   comment: "match comments starting with a double-slash"
   match: (//).*$\n?
   captures:
@@ -34,10 +34,10 @@ patterns:
   captures:
     '0': {name: punctuation.definition.comment.fsp}
 
-- name: keyword.other.fsp
+- name: constant.language.fsp
   match: \b(STOP|START|ERROR)
 
-- name: constant.source.fsp
+- name: constant.other.fsp
   comment: matches process names
   match: \b([A-Z][A-Z|_]+)
 

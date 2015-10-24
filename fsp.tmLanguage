@@ -17,7 +17,7 @@
 			<key>match</key>
 			<string>\b(when|const|forall|range|property|progress)</string>
 			<key>name</key>
-			<string>keyword.source.fsp</string>
+			<string>keyword.reserved.fsp</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -41,7 +41,7 @@
 			<key>match</key>
 			<string>(//).*$\n?</string>
 			<key>name</key>
-			<string>comment.line.double-slash.fsp</string>
+			<string>comment.line.fsp</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -83,7 +83,7 @@
 			<key>match</key>
 			<string>\b(STOP|START|ERROR)</string>
 			<key>name</key>
-			<string>keyword.other.fsp</string>
+			<string>constant.language.fsp</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -91,7 +91,7 @@
 			<key>match</key>
 			<string>\b([A-Z][A-Z|_]+)</string>
 			<key>name</key>
-			<string>constant.source.fsp</string>
+			<string>constant.other.fsp</string>
 		</dict>
 		<dict>
 			<key>comment</key>
