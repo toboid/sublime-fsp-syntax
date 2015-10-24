@@ -12,7 +12,7 @@ patterns:
 
 - name: keyword.operator.fsp
   comment: "matches and operator"
-  match: (->|&&|\|\||%|\+)
+  match: (->|&&|\|\||%|\+|<<|>>)
 
 - name: comment.line.fsp
   comment: "match comments starting with a double-slash"

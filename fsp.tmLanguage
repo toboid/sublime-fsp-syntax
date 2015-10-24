@@ -23,7 +23,7 @@
 			<key>comment</key>
 			<string>matches and operator</string>
 			<key>match</key>
-			<string>(-&gt;|&amp;&amp;|\|\||%|\+)</string>
+			<string>(-&gt;|&amp;&amp;|\|\||%|\+|&lt;&lt;|&gt;&gt;)</string>
 			<key>name</key>
 			<string>keyword.operator.fsp</string>
 		</dict>
