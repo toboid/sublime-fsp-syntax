@@ -8,7 +8,7 @@ uuid: 3c1def7a-05ff-48e2-b1cf-f1d3f150908f
 patterns:
 - name: keyword.reserved.fsp
   comment: "matches a keyword"
-  match: \b(when|const|forall|range|property|progress)
+  match: \b(when|const|forall|range|property|progress)\b
 
 - name: keyword.operator.fsp
   comment: "matches and operator"
@@ -20,13 +20,6 @@ patterns:
   captures:
     '1': {name: punctuation.definition.comment.fsp}
 
-- name: comment.block.fsp
-  comment: "match comment blocks starting with /*"
-  begin: /\*
-  end: \*/
-  captures:
-    '0': {name: punctuation.definition.comment.fsp}
-
 - name: comment.block.documentation.fsp
   comment: "match comment blocks starting with /** with 2 or more *"
   begin: /\*\*(?!/)
@@ -34,16 +27,23 @@ patterns:
   captures:
     '0': {name: punctuation.definition.comment.fsp}
 
+- name: comment.block.fsp
+  comment: "match comment blocks starting with /*"
+  begin: /\*
+  end: \*/
+  captures:
+    '0': {name: punctuation.definition.comment.fsp}
+
 - name: constant.language.fsp
-  match: \b(STOP|START|ERROR)
+  match: \b(STOP|START|ERROR)\b
 
 - name: constant.other.fsp
   comment: matches process names
-  match: \b([a-zA-Z][A-Z|_|0-9]+)
+  match: \b([A-Z][a-zA-Z_0-9]*)
 
 - name: entity.name.function.fsp
   comment: matches action names
-  match: \b([a-z][a-za-zA-Z|_|0-9]+)
+  match: \b([a-z][a-zA-Z_0-9]*)
 
 - name: meta.brace.square.fsp
   comment: matches square braces [ or ]
