@@ -39,11 +39,11 @@ patterns:
 
 - name: constant.other.fsp
   comment: matches process names
-  match: \b([a-zA-Z][A-Z_0-9]+)
+  match: \b([A-Z][a-zA-Z_0-9]*)
 
 - name: entity.name.function.fsp
   comment: matches action names
-  match: \b([a-z][a-zA-Z_0-9]+)
+  match: \b([a-z][a-zA-Z_0-9]*)
 
 - name: meta.brace.square.fsp
   comment: matches square braces [ or ]
