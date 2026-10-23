@@ -15,7 +15,7 @@
 			<key>comment</key>
 			<string>matches a keyword</string>
 			<key>match</key>
-			<string>\b(when|const|forall|range|property|progress)</string>
+			<string>\b(when|const|forall|range|property|progress)\b</string>
 			<key>name</key>
 			<string>keyword.reserved.fsp</string>
 		</dict>
@@ -45,24 +45,6 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>/\*</string>
-			<key>captures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.comment.fsp</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>match comment blocks starting with /*</string>
-			<key>end</key>
-			<string>\*/</string>
-			<key>name</key>
-			<string>comment.block.fsp</string>
-		</dict>
-		<dict>
-			<key>begin</key>
 			<string>/\*\*(?!/)</string>
 			<key>captures</key>
 			<dict>
@@ -80,8 +62,26 @@
 			<string>comment.block.documentation.fsp</string>
 		</dict>
 		<dict>
+			<key>begin</key>
+			<string>/\*</string>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.fsp</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>match comment blocks starting with /*</string>
+			<key>end</key>
+			<string>\*/</string>
+			<key>name</key>
+			<string>comment.block.fsp</string>
+		</dict>
+		<dict>
 			<key>match</key>
-			<string>\b(STOP|START|ERROR)</string>
+			<string>\b(STOP|START|ERROR)\b</string>
 			<key>name</key>
 			<string>constant.language.fsp</string>
 		</dict>
@@ -89,7 +89,7 @@
 			<key>comment</key>
 			<string>matches process names</string>
 			<key>match</key>
-			<string>\b([a-zA-Z][A-Z|_|0-9]+)</string>
+			<string>\b([a-zA-Z][A-Z_0-9]+)</string>
 			<key>name</key>
 			<string>constant.other.fsp</string>
 		</dict>
@@ -97,7 +97,7 @@
 			<key>comment</key>
 			<string>matches action names</string>
 			<key>match</key>
-			<string>\b([a-z][a-za-zA-Z|_|0-9]+)</string>
+			<string>\b([a-z][a-zA-Z_0-9]+)</string>
 			<key>name</key>
 			<string>entity.name.function.fsp</string>
 		</dict>
